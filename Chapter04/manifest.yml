@@ -3,9 +3,9 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  name: Z2C-DonnaG
+  name: Z2C-DonnaG_Text_to_Speech
   host: DonnaG
   disk_quota: 1024M
   services:
     - Speech to Text-2e
-    - Test to Speech-xu
+    - Test to Speech-ex
