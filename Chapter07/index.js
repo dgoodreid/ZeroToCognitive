@@ -46,10 +46,10 @@ var app = express();
 //  used to encode and decode cookies sent between the browser and the server
 /**
 for information on how to enable https support in osx, go here:
-  https://gist.github.com/nrollr/4daba07c67adcb30693e
-openssl genrsa -out key.pem
-openssl req -new -key key.pem -out csr.pem
-openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
+ https://gist.github.com/nrollr/4daba07c67adcb30693e
+ openssl genrsa -out key.pem
+ openssl req -new -key key.pem -out csr.pem
+ openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
 **/
 if (cfenv.getAppEnv().isLocal == true)
 {

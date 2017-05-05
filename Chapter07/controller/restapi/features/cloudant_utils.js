@@ -35,7 +35,7 @@ function authenticate(cbfn, _name, _clear)
   cloudant_credentials = require('../../env.json').cloudant;
   var params = "name="+cloudant_credentials.username+"&password="+cloudant_credentials.password
   request({
-        url: cloudant_credentials.url+"/_session",
+  url: cloudant_credentials.url+"/_session",
         method: "POST",
         headers: { "content-type": "application/x-www-form-urlencoded" },
         form: params
@@ -43,9 +43,10 @@ function authenticate(cbfn, _name, _clear)
         if (error) { console.log("authenticate error: "+error)}
         else { cloudantAuth=response["headers"]["set-cookie"];
         if(_name!=""){if (typeof(cbfn) == 'function') {cbfn(_name, _clear);}}}
-    });
-}
+   });
+	}
 function logout(_user)
+
 {
   // log this user out of the database. disables the current authentication cookie.
 }
